@@ -1,0 +1,88 @@
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
+  
+.container {
+    position: absolute;
+    background-color: whitesmoke;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 1904px;
+    height: 780px;
+}
+
+  
+form {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; 
+    border: none;
+    margin: auto;
+}
+  
+  /* Style individual form fields */
+  form input[type="text"],
+  form button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+form input[type="text"]::placeholder {
+    color: #999;
+}
+
+input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+  
+.form-group label {
+    margin-right: 10px; 
+    min-width: 120px; 
+}
+  
+
+
+
+button{
+    margin-left: 25px;
+    display: inline-block;
+    background-color:rgb(18, 132, 203);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px; 
+}
+
+form button:hover {
+    background-color: #5ec7da; 
+}
+  

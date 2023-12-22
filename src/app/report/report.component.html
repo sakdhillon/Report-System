@@ -1,0 +1,46 @@
+
+
+
+<p>
+    Criminal: <span [textContent] = 'report.criminalName'></span> <br>
+    Location: {{ report.location }}<br><br>
+    <!-- picURL = {{ report.picURL }} <br> -->
+
+    Resolved: <span *ngIf="report.status; then resolv else open"></span> <br>
+    <ng-template #resolv>&check;</ng-template>
+    <ng-template #open><b>X</b></ng-template>
+    <!-- Extra Information: {{ report.extraInfo }} <br><br> -->
+
+    Date and Time Reported: <br>{{ report.time | date: 'dd/MM/yyyy; HH:mm a' }} <br> <br>
+
+    <!-- Witness: {{ report.witnessName }} <br>
+    Witness Phone Number: {{ report.witnessNumber }}<br><br> -->
+
+    <button id="delete"
+        (click)="val()"    
+    >Delete</button>
+
+    <button id="show"
+        (click)="onView($event,report)"
+    >View</button> 
+</p>
+
+    <br><br>
+    <div *ngIf="validate">
+        <span class="password">Only an Admiral may delete a report <br>
+            Please enter your password:
+        </span>
+
+        <input type="password" class="password" id="pass">
+        <button (click)="hashPassword($event,report.cid)">Submit</button>
+
+        <div *ngIf="wrong">
+            <p id="wrong">The password you submitted is incorrect</p>
+        </div>
+    </div>
+    
+
+
+
+
+

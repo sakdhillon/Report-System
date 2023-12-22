@@ -1,0 +1,39 @@
+
+
+<main>
+
+    <div class="container">
+      <div class="question">
+      <p>Don't want to add a report any longer? Just hit the back button here</p>
+      <div class="button"><button id="backButton" (click)="onBack()">Back</button>
+      <br><br><br><br>
+      <h2>Edit Status</h2>
+    </div>
+
+      </div>
+        <form 
+            [formGroup]="form"
+            (ngSubmit)="onSubmit(form.value)"
+        >
+
+        <div class="form-group">
+            <label for="criminalName">Criminal Name:</label>
+            <p>{{r.criminalName}}</p>
+          </div>
+    
+          <div class="form-group">
+            <label for="status">Resolved:</label>
+            <input 
+              type="checkbox"
+              id="status"
+              name="Status"
+              [(ngModel)]="r.status"
+              formControlName="status"
+            >
+          </div>
+
+            <button>Save</button>
+    
+        </form>
+    </div>
+</main>

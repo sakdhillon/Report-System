@@ -1,0 +1,86 @@
+button{
+    margin-left: 25px;
+    display: inline-block;
+    background-color:rgb(18, 132, 203);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px; 
+    margin-top: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
+    flex-direction: column;
+    background-color: whitesmoke;
+
+    padding-bottom: 200px;
+}
+
+.section{
+    background-color: whitesmoke;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    height: auto;
+    margin-bottom: -80px;
+    overflow-x: auto; 
+
+
+    
+}
+  
+#showMore {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 150%;
+    /* padding: 50px;  */
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+
+
+#showMore tr:nth-child(odd) {
+    background-color: #7bb8f2; 
+}
+
+
+#showMore tr:nth-child(even) {
+    background-color: rgb(198, 216, 242); 
+}
+
+#showMore td {
+    padding: 10px; 
+    padding-left: 90px;
+    padding-right: 100px;
+}
+
+
+#close{
+    margin-right: 150px;
+}
+
+#Edit{
+    margin-right: 40px;
+}
+
+#wrong{
+    color: red;
+}
+
+
+
+
+

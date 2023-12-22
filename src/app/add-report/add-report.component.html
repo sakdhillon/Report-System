@@ -1,0 +1,104 @@
+
+
+<main>
+
+  <h2>Add a Report</h2>
+      <p>If you can't find the right location, add a location at the bottom of the page</p>
+      <p>When adding, press save, and you should be able to find the location you added within the drop down</p>
+      <p>Don't want to add a report any longer? Just hit the back button here</p>
+      <div class="button"><button id="backButton" (click)="onBack()">Back</button></div>
+        <form 
+            [formGroup]="form"
+            (ngSubmit)="onSubmit(form.value)"
+        >
+
+        <div class="form-group">
+            <label for="criminalName">Criminal Name:</label>
+            <input 
+              type="text"
+              id="criminalName"
+              name="Criminal Name"
+              placeholder="The Baddie"
+              formControlName="criminalName"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <select id="location" name="location" formControlName="location"></select>
+          </div>
+      
+          <!-- <div class="form-group">
+            <label for="picURL">Picture URL:</label>
+            <input 
+              type="text"
+              id="picURL"
+              name="Picture"
+              placeholder="url"
+              formControlName="picURL"
+            >
+          </div> -->
+
+
+          <div class="form-group">
+            <label for="extraInfo">Extra Information:</label>
+            <input 
+              type="text"
+              id="extraInfo"
+              name="Extra Information"
+              placeholder="Helpful Info"
+              formControlName="extraInfo"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="witnessName">Witness Name:</label>
+            <input 
+                type="text"
+                id="witnessName"
+                name="Witness Name"
+                placeholder="Your Name"
+                formControlName="witnessName"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="witnessNumber">Witness Number:</label>
+            <input 
+                type="text"
+                id="witnessNumber"
+                name="Witness Number"
+                placeholder="Your Phone Number"
+                formControlName="witnessNumber"
+            >
+          </div>
+
+            <button [disabled]="!form.valid">Save</button>
+            <!-- [disabled]="!form.valid" -->
+        </form>
+
+        <div class="map">
+          <h3>Add a Location</h3>
+
+          <div id="adding-location">
+            <label for="placeName">Location Name:</label>
+            <input type="text"
+            id="placeName"
+            name="placeName"
+            placeholder="Place Name">
+
+            <p>Longitude: {{this.long}} </p>
+            <p>Latitude: {{this.lat}}</p> 
+            <button (click)="saveLocation()">Save</button>
+          </div>
+    
+          <div class="maplink">
+    
+            <app-locations (click)="clickevent()"></app-locations>
+    
+          </div>
+        </div>
+</main>
+
+
+

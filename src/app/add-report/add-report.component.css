@@ -1,0 +1,114 @@
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.map{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+h2,h3{
+    text-align: center;
+}
+
+p{
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+  
+form {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; 
+    border: none;
+    margin: auto;
+}
+  
+
+form input[type="text"],form button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+  
+form input[type="text"]::placeholder {
+    color: #999;
+}
+
+input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+  
+.form-group label {
+    margin-right: 10px; 
+    min-width: 120px; 
+}
+  
+
+
+
+button{
+    margin-left: 25px;
+    display: inline-block;
+    background-color:rgb(18, 132, 203);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px; 
+}
+
+form button:hover {
+    background-color: #5ec7da; 
+}
+
+
+
+#adding-location{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+input{
+    margin-right: 10px;
+}
+
+p{
+    margin-right: 20px;    
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.button{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}

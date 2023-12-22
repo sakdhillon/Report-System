@@ -1,0 +1,69 @@
+<br><br>
+<main class="section" *ngIf="dataLoaded">
+    <div class="container">
+        <table id="showMore">
+            <tbody>
+                <tr>
+                    <td>Criminal</td>
+                    <td>{{ r.criminalName }}</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>{{ r.location }}</td>
+                </tr>
+
+                <tr>
+                    <td>Resolved</td>
+                    <td><span *ngIf="r.status; then resolv else open"></span></td>
+                    <ng-template #resolv>&check;</ng-template>
+                    <ng-template #open><b>X</b></ng-template>
+                </tr>
+
+                <tr>
+                    <td>Extra Information</td>
+                    <td>{{ r.extraInfo }}</td>
+                </tr>
+
+                <tr>
+                    <td>Date and Time Reported</td>
+                    <td>{{ r.time | date: 'dd/MM/yyyy; HH:mm a' }}</td>
+                </tr>
+
+                <tr>
+                    <td>Witness</td>
+                    <td>{{ r.witnessName }}</td>
+                </tr>
+
+                <tr>
+                    <td>Witness Phone Number</td>
+                    <td>{{ r.witnessNumber }}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="button-container">
+
+        <button id="close"
+        (click)="onClose()">Close</button>
+        <button id="Edit"
+        (click)="val()">Edit</button>
+
+    
+    </div>
+
+    <br><br>
+
+    <div *ngIf="validate">
+        <span class="password">Only an Admiral may edit a report <br>
+            Please enter your password:
+        </span>
+
+        <input type="password" class="password" id="pass">
+        <button (click)="hashPassword($event,r.cid)">Submit</button>
+        <div *ngIf="wrong">
+            <p id="wrong">The password you submitted is incorrect</p>
+        </div>
+    </div>
+</main>
