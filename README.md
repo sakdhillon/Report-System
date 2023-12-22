@@ -1,5 +1,7 @@
 # ReportSystem
 
+This project was made for my first web development class, which had a focus on Client Side Web-development. This is the code that I submitted for that assignment, without using the feedback my TAs provided. I am hoping to make new projects that incorporate that feedback and look back at my progress!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
 ## Development server
